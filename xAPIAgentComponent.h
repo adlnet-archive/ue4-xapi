@@ -2,7 +2,9 @@
 
 #pragma once
 
+
 #include "Components/ActorComponent.h"
+#include "Json.h"
 #include "xAPIAgentComponent.generated.h"
 
 
@@ -36,11 +38,6 @@ struct FAgentAccountInfo
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = ExperienceAPI)
 		FString Name;
-
-	FAgentAccountInfo(){
-		Homepage = TEXT("");
-		Name = TEXT("");
-	}
 };
 
 /**
@@ -72,5 +69,5 @@ public:
 	UPROPERTY(EditAnywhere, Category = ExperienceAPI)
 		FAgentAccountInfo Account;
 
-	//UxAPIAgentComponent(const class FPostConstructInitializeProperties& PCIP);
+	const TSharedPtr<FJsonObject> toAgent() const;
 };
