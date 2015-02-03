@@ -7,6 +7,7 @@
 #include "Json.h"
 #include "xAPIAgentComponent.generated.h"
 
+DECLARE_LOG_CATEGORY_EXTERN(xAPILog, Log, All);
 
 /*UENUM(BlueprintType)
 enum class EAgentIFIType : uint8
@@ -43,7 +44,7 @@ struct FAgentAccountInfo
 /**
  * A component representing an xAPI Agent, i.e. a learner
  */
-UCLASS(BlueprintType)
+UCLASS(BlueprintType, meta=(BlueprintSpawnableComponent))
 class XAPIINTEGRATION_API UxAPIAgentComponent : public UActorComponent
 {
 	GENERATED_UCLASS_BODY()

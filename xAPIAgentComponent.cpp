@@ -3,6 +3,7 @@
 #include "xAPIIntegration.h"
 #include "xAPIAgentComponent.h"
 
+DEFINE_LOG_CATEGORY(xAPILog);
 
 UxAPIAgentComponent::UxAPIAgentComponent(const class FPostConstructInitializeProperties& PCIP)
 	: Super(PCIP), ifi_type(EAgentIFIType::MBOX)
